@@ -2,7 +2,7 @@
 
 #set up and log password
 
-if  grep -Fxq   "name=\"admin\" password=\"admin\"" /opt/apache-tomcat-8.5.4/conf/tomcat-users.xml
+if  grep -Fq   "name=\"admin\" password=\"admin\"" /opt/apache-tomcat-8.5.4/conf/tomcat-users.xml
 then
 
   PASS=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
