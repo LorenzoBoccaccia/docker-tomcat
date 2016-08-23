@@ -22,6 +22,8 @@ RUN apk add --update curl &&\
 
 # Configuration
 ADD tomcat-users.xml /opt/tomcat/conf/
+ADD context.xml /opt/apache-tomcat-8.5.4/webapps/manager/META-INF/
+
 RUN sed -i 's/52428800/5242880000/g' /opt/tomcat/webapps/manager/WEB-INF/web.xml 
 
 # Set environment
