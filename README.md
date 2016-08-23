@@ -1,4 +1,4 @@
-## Minimal Docker image with Apache Tomcat forked from [![Build Status](https://travis-ci.org/jeanblanchard/docker-tomcat.svg?branch=master)](https://travis-ci.org/jeanblanchard/docker-tomcat)
+## Minimal Docker image with Apache Tomcat forked from [jeanblanchard](https://github.com/jeanblanchard/docker-tomcat)
 
 Basic [Docker](https://www.docker.com/) image to run [Apache Tomcat](http://tomcat.apache.org/).
 This is based on [Alpine Linux](http://alpinelinux.org/) to keep the size minimal.
