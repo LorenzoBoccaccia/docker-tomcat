@@ -1,4 +1,4 @@
-FROM  java:oracle-java8
+FROM  openjdk:8-jdk
 
 # Expose web port
 EXPOSE 8080
