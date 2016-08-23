@@ -29,7 +29,7 @@ ADD run.sh /opt/tomcat/bin/
 
 RUN keytool -genkey -keystore /opt/tomcat/keystore -alias tomcat -keyalg RSA -keysize 4096 -validity 720 -noprompt  -dname "CN=$(hostname), OU=, O=, L=, S=, C=" -storepass password -keypass password
 
-RUN sed -i '109i <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" maxThreads="150" SSLEnabled="true" scheme="https" secure="true" clientAuth="false" sslProtocol="TLS" keyAlias="ALIAS" keystoreFile="/opt/tomcat/keystore" keystorePass="password" />'  /opt/tomcat/conf/server.xml
+RUN sed -i '109i <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" maxThreads="150" SSLEnabled="true" scheme="https" secure="true" clientAuth="false" sslProtocol="TLS" keyAlias="tomcat" keystoreFile="/opt/tomcat/keystore" keystorePass="password" />'  /opt/tomcat/conf/server.xml
 
 
 RUN chmod a+x /opt/tomcat/bin/run.sh
