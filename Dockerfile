@@ -1,4 +1,4 @@
-FROM  dockerfile/java:oracle-java8
+FROM  java:oracle-java8
 
 # Expose web port
 EXPOSE 8080
