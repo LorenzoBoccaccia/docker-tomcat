@@ -3,6 +3,7 @@ MAINTAINER Jean Blanchard <jean@blanchard.io>
 
 # Expose web port
 EXPOSE 8080
+EXPOSE 8443
 
 # Tomcat Version
 ENV TOMCAT_VERSION_MAJOR 8
