@@ -23,10 +23,10 @@ RUN apk add --update curl &&\
 # Configuration
 ADD tomcat-users.xml /opt/tomcat/conf/
 ADD context.xml /opt/tomcat/webapps/manager/META-INF/
-ADD run.sh ./opt/tomcat/bin/
+ADD run.sh /opt/tomcat/bin/
 
 RUN sed -i 's/52428800/5242880000/g' /opt/tomcat/webapps/manager/WEB-INF/web.xml 
-
+RUN chmod a+x /opt/tomcat/bin/run.sh
 # Set environment
 ENV CATALINA_HOME /opt/tomcat
 
